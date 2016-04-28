@@ -1,0 +1,49 @@
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/editmeeting.css" />
+
+<!-- MODAL -->
+<div id="editmeeting-modal" class="modal fade" tabindex="-1" aria-labelledby="editmeeting-modal-title" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="__MSG__CLOSE__">
+                    <span aria-hidden="true">&#215;</span>
+                </button>
+                <h3 id="editmeeting-modal-title">__MSG__EDIT_DETAILS__</h3>
+            </div>
+            <form id="editmeeting-form">
+                <div class="modal-body"><!-- --></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-link" data-dismiss="modal">__MSG__CANCEL__</button>
+                    <button type="submit" class="btn btn-primary" disabled="true">__MSG__SAVE__</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="editmeeting-template"><!--
+    <div class="form-group">
+        <label for="editmeeting-name" class="control-label"><h4>__MSG__MEETING_NAME__</h4></label>
+        <input type="text" id="editmeeting-name" class="form-control required maxlength-short" name="editmeeting-name" placeholder="__MSG__WHAT_WOULD_YOU_LIKE_TO_CALL_YOUR_MEETING__" value="${meeting.displayName|encodeForHTMLAttribute}"/>
+    </div>
+    <div class="form-group">
+        <label for="editmeeting-description" class="control-label"><h4>__MSG__MEETING_DESCRIPTION__</h4></label>
+        <textarea id="editmeeting-description" class="form-control required maxlength-medium" name="editmeeting-description" placeholder="__MSG__WHAT_IS_YOUR_MEETING_ABOUT__">${meeting.description|encodeForHTML}</textarea>
+    </div>
+    <div class="form-group editmeeting-record">
+        <input type="checkbox" id="editmeeting-record" ${meeting.record == 'true'? 'checked': ''}>&nbsp;
+        <label for="editmeeting-record" class="control-label"><h4>__MSG__MEETING_MAY_BE_RECORDED__</h4></label>
+    </div>
+    <div class="form-group editmeeting-allmoderators">
+        <input type="checkbox" id="editmeeting-allmoderators" ${meeting.allModerators == 'true'? 'checked': ''}>&nbsp;
+        <label for="editmeeting-allmoderators" class="control-label"><h4>__MSG__MEETING_ALL_USERS_MODERATORS__</h4></label>
+    </div>
+    <div class="form-group editmeeting-waitmoderator ${meeting.allModerators == 'true'? 'hidden': ''}">
+        <input type="checkbox" id="editmeeting-waitmoderator" ${meeting.waitModerator == 'true'? 'checked': ''}>&nbsp;
+        <label for="editmeeting-waitmoderator" class="control-label"><h4>__MSG__MEETING_WAIT_FOR_MODERATOR__</h4></label>
+    </div>
+--></div>
+
+<!-- JAVASCRIPT -->
+<script type="text/javascript" src="js/editmeeting.js"></script>

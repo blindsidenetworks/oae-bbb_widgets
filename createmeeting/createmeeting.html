@@ -1,0 +1,51 @@
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/createmeeting.css" />
+
+<!-- MODAL -->
+<div id="createmeeting-modal" class="modal fade" tabindex="-1" aria-labelledby="createmeeting-modal-title" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="__MSG__CLOSE__">
+                    <span aria-hidden="true">&#215;</span>
+                </button>
+                <h3 id="createmeeting-modal-title">__MSG__CREATE_MEETING__</h3>
+            </div>
+            <form id="createmeeting-form" role="form">
+                <div class="modal-body">
+                    <div id="createmeeting-overview-container">
+                        <div class="form-group">
+                            <label for="createmeeting-name" class="control-label"><h4>__MSG__MEETING_NAME__</h4></label>
+                            <input type="text" id="createmeeting-name" class="form-control required maxlength-short" name="createmeeting-name" placeholder="__MSG__WHAT_WOULD_YOU_LIKE_TO_CALL_YOUR_MEETING__"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="createmeeting-description" class="control-label"><h4>__MSG__MEETING_DESCRIPTION__</h4></label>
+                            <textarea id="createmeeting-description" class="form-control required maxlength-medium" name="createmeeting-description" placeholder="__MSG__WHAT_IS_YOUR_MEETING_ABOUT__"></textarea>
+                        </div>
+                        <div class="form-group createmeeting-record">
+                            <input type="checkbox" id="createmeeting-record">&nbsp;
+                            <label for="createmeeting-record" class="control-label"><h4>__MSG__MEETING_MAY_BE_RECORDED__</h4></label>
+                        </div>
+                        <div class="form-group createmeeting-allmoderators">
+                            <input type="checkbox" id="createmeeting-allmoderators">&nbsp;
+                            <label for="createmeeting-allmoderators" class="control-label"><h4>__MSG__MEETING_ALL_USERS_MODERATORS__</h4></label>
+                        </div>
+                        <div class="form-group createmeeting-waitmoderator">
+                            <input type="checkbox" id="createmeeting-waitmoderator">&nbsp;
+                            <label for=createmeeting-waitmoderator class="control-label"><h4>__MSG__MEETING_WAIT_FOR_MODERATOR__</h4></label>
+                        </div>
+                        <div id="createmeeting-permissions" class="well well-sm clearfix"><!-- --></div>
+                    </div>
+                    <div id="createmeeting-permissions-container" class="hide"><!-- --></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-link" data-dismiss="modal">__MSG__CANCEL__</button>
+                    <button type="submit" id="createmeeting-create" class="btn btn-primary">__MSG__CREATE_MEETING__</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- JAVASCRIPT -->
+<script type="text/javascript" src="js/createmeeting.js"></script>

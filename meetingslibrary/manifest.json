@@ -1,0 +1,7 @@
+{
+    "i18n": {
+        "default": "bundles/default.properties",
+        "es_ES": "bundles/es_ES.properties"
+    },
+    "src": "meetingslibrary.html"
+}
